@@ -8,8 +8,10 @@
 </head>
 <body>
 <body>
-		<h2>${message}</h2>
-		 ${uinfoData}
-	</body>
+		<div>
+				<h2>${message}</h2>
+				<h2>${uinfoData}</h2>
+		</div>
+</body>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.vuclip.smartcombodia.bean;
+package com.vuclip.beans;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

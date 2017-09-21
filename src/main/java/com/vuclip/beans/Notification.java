@@ -1,4 +1,4 @@
-package com.vuclip.umobmy.bean;
+package com.vuclip.beans;
 
 public class Notification {
 

@@ -1,4 +1,4 @@
-package com.vuclip.umobmy.controller;
+package com.vuclip.uiaas.controller;
 
 import java.io.IOException;
 import java.util.Date;
@@ -8,19 +8,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.vuclip.api.service.util.XinWebUtil;
-
-
-import com.xinlab.blueapple.VuclipWebUtil;
-import com.xinlab.blueapple.util.XinEmailUtil;
 
 @Controller
 public class UserInfoController {

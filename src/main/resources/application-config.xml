@@ -7,24 +7,27 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- Uncomment and your base-package here: -->
+	<!-- add base-package here: -->
 	<context:component-scan base-package="com.vuclip" />
-
-<mvc:annotation-driven /> 
-<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
-<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-	<property name="messageConverters">
-		  <list>
-		    <ref bean="jacksonMessageConverter"/>
-		  </list>
-	</property>
-</bean>
+    <mvc:annotation-driven /> 
+    <!--  to override any property, the order of new file should be less than this  -->
+	<context:property-placeholder location="classpath:vuclip_stub.properties" order="1" ignore-unresolvable="true" />
+	
+	<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
+	
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			  <list>
+			    <ref bean="jacksonMessageConverter"/>
+			  </list>
+		</property>
+	</bean>
 
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
-		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="prefix" value="/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 

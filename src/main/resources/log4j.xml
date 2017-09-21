@@ -12,7 +12,7 @@
 	</appender>
 	
 	<appender name="debugFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="${catalina.home}/logs/debuglogs/mvs.log" />
+		<param name="File" value="${catalina.home}/logs/debuglogs/stub.log" />
 		<param name="DatePattern" value=".yyyy-MM-dd-HH" />
 		<param name="maxFileSize" value="1000MB" />
 		<param name="maxBackupIndex" value="10" />
